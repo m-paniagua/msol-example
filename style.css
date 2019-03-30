@@ -30,7 +30,7 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-.navbar {
+/* .navbar {
     padding: 15px 10px;
     background: #fff;
     border: none;
@@ -43,7 +43,7 @@ a, a:hover, a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
-}
+} */
 
 .line {
     width: 100%;
@@ -72,8 +72,8 @@ i, span {
     background: linear-gradient(to bottom right, #39579a, #0077b5);
     color: #fff;
     transition: all 0.3s;
-    /* position: fixed;
-    min-height: 100vh; */
+    position: fixed;
+    min-height: 100vh;
 }
 
 #sidebar.active {
@@ -249,6 +249,11 @@ ul.CTAs a {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+    margin-left: 250px;
+}
+
+#content.active {
+    margin-left: 85px;
 }
 
 .content-row {
@@ -369,9 +374,12 @@ ul.CTAs a {
         display: none;
     }
     .btn-collapse {
-        color: #39579a;
+        color: white;
     }
     #sidebarCollapse.active.btn-collapse {
-        color: white;
+        color: #39579a;
+    }
+    #content {
+        margin-left: 0;
     }
 }
