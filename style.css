@@ -3,14 +3,6 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700";
-.one, .two, .three {
-    min-height: 100vh;
-}
-
-.one {
-    background: red;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     background: #fafafa;
@@ -27,7 +19,7 @@ p {
 a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all 0.4s ease;
 }
 
 /* .navbar {
@@ -46,7 +38,7 @@ a, a:hover, a:focus {
 } */
 
 .line {
-    width: 100%;
+    /* width: 100%; */
     height: 1px;
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
@@ -71,7 +63,7 @@ i, span {
     /* background: #7386D5; */
     background: linear-gradient(to bottom right, #39579a, #0077b5);
     color: #fff;
-    transition: all 0.3s;
+    transition: all 0.4s ease;
     position: fixed;
     min-height: 100vh;
 }
@@ -87,7 +79,7 @@ i, span {
 }
 
 #sidebar.active span {
-    display: none;
+    display: block;
 }
 
 #sidebar.active .sidebar-header h3, #sidebar.active .CTAs {
@@ -151,7 +143,7 @@ i, span {
 }
 
 #sidebar ul li a {
-    padding: 10px;
+    padding: 20px;
     font-size: 1.1em;
     display: block;
 }
@@ -201,21 +193,6 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-/* a.download {
-    background: #fff;
-    color: #7386D5;
-} */
-
-/* ul.CTAS a.article, a.download {
-    display: block;
-    text-align: center;
-} */
-
-/* a.article, a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-} */
-
 .menu-bottom {
     position: fixed;
     min-width: 250px;
@@ -240,6 +217,17 @@ ul.CTAs a {
     cursor: pointer;
 }
 
+#home-content {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* #home-content .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+} */
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -248,7 +236,7 @@ ul.CTAs a {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
-    transition: all 0.3s;
+    transition: all 0.4s ease;
     margin-left: 250px;
 }
 
@@ -260,11 +248,11 @@ ul.CTAs a {
     align-items: stretch;
 }
 
-.img-gallery {
-    /* min-height: 30%;
-    background: #39579a; */
+/* .img-gallery {
+    min-height: 30%;
+    background: #39579a;
     padding: 15px 0;
-}
+} */
 
 .img-gallery .card, .img-gallery img {
     margin: 15px 0;
@@ -272,7 +260,8 @@ ul.CTAs a {
 
 .footer {
     min-height: 200px;
-    background: #0077b5;
+    /* background: linear-gradient(to bottom right, #39579a, #0077b5); */
+    background: gray;
 }
 
 /* ---------------------------------------------------
@@ -283,12 +272,23 @@ ul.CTAs a {
     /* min-width: 250px;
     max-width: 250px; */
     min-height: 100vh;
-    background: #39579a;
+    /* background: linear-gradient(to bottom right, #39579a, #0077b5); */
+    background: gray;
 }
 
 /* ---------------------------------------------------
-    Card profile
+    Team
 ----------------------------------------------------- */
+
+.btn-primary {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.btn-primary:hover {
+    background-color: #39579a;
+    border-color: #39579a;
+}
 
 .card {
     text-align: center;
@@ -311,7 +311,27 @@ ul.CTAs a {
 
 .contact-section {
     min-height: 350px;
-    background: #39579a;
+    background: gray;
+}
+
+/* ---------------------------------------------------
+    Services
+----------------------------------------------------- */
+
+.header-image {
+    margin-bottom: 25px;
+}
+
+.featurette {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
 }
 
 /* ---------------------------------------------------
@@ -319,7 +339,7 @@ ul.CTAs a {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
-    #rightbar {
+    #rightBar {
         display: none;
     }
     #sidebar {
@@ -345,8 +365,9 @@ ul.CTAs a {
     #sidebar .sidebar-header strong {
         display: block;
     }
-    #sidebar ul li a {
-        padding: 20px 10px;
+    #sidebar.active ul li a {
+        /* padding: 20px 10px; */
+        padding: 10px;
     }
     #sidebar ul li a span {
         font-size: 0.85em;
@@ -367,9 +388,9 @@ ul.CTAs a {
     #sidebarCollapse {
         display: block;
     }
-    #sidebarCollapse span {
+    /* #sidebarCollapse span {
         display: none;
-    }
+    } */
     #sidebar span {
         display: none;
     }
@@ -381,5 +402,17 @@ ul.CTAs a {
     }
     #content {
         margin-left: 0;
+    }
+}
+
+@media (min-width: 40em) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    #sidebar.active span {
+        display: none;
     }
 }
