@@ -222,6 +222,10 @@ ul.CTAs a {
     position: relative;
 }
 
+/* .mobile-hamburger {
+    display: none;
+} */
+
 /* #home-content .footer {
     position: absolute;
     bottom: 0;
@@ -259,7 +263,7 @@ ul.CTAs a {
 }
 
 .footer {
-    min-height: 200px;
+    min-height: 150px;
     /* background: linear-gradient(to bottom right, #39579a, #0077b5); */
     background: gray;
 }
@@ -403,16 +407,22 @@ ul.CTAs a {
     #content {
         margin-left: 0;
     }
-}
-
-@media (min-width: 40em) {
-    .featurette-heading {
-        font-size: 50px;
+    /* .mobile-hamburger {
+        display: block;
     }
+    .menu-bottom {
+        display: none;
+    } */
 }
 
 @media (min-width: 768px) {
     #sidebar.active span {
         display: none;
+    }
+}
+
+@media (min-width: 40em) {
+    .featurette-heading {
+        font-size: 50px;
     }
 }
